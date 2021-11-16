@@ -1,0 +1,559 @@
+
+body{
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    color: #313131;
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.smg{
+    margin-top: 180px;
+    @media screen and (max-width: 760px) {
+        margin-top: 80px;
+     }
+}
+
+// animation
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+a{
+    color: #000;
+    text-decoration: none;
+    &:visited{
+        color: #000;
+    }
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding-left:50px;
+    z-index: 9000;
+    @media screen and (max-width: 760px) {
+        padding-left:0px;
+    }
+    .p_logo{
+        font-size: 24px;
+        @media screen and (max-width: 760px) {
+            margin-left: 24px;
+        }
+    }
+    .p_nav_pc ul{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        @media screen and (max-width: 760px) {
+            display: none;
+        }
+        li{
+            margin-right: 40px;
+            &:last-child{
+                margin-right: 0px;
+                line-height: 80px;
+                width: 120px;
+                text-align: center;
+                background-color: bisque;
+            }
+        }
+    }
+
+    .openbtn6{
+        display: none;
+        position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+        cursor: pointer;
+          width: 50px;
+          height:50px;
+        border-radius: 5px;
+        margin-right: 24px;
+        @media screen and (max-width: 760px) {
+            display: block;
+        }
+      }
+      
+      /*ボタン内側*/
+      .openbtn6 span{
+          display: inline-block;
+          transition: all .4s;/*アニメーションの設定*/
+          position: absolute;
+          left: 14px;
+          height: 3px;
+          border-radius: 2px;
+        background: #000;
+        }
+      
+      
+      .openbtn6 span:nth-of-type(1) {
+        top:15px; 
+          width: 45%;
+      }
+      
+      .openbtn6 span:nth-of-type(2) {
+        top:23px;
+          width: 35%;
+      }
+      
+      .openbtn6 span:nth-of-type(3) {
+        top:31px;
+          width: 20%;
+      }
+      
+      /*activeクラスが付与されると線が回転して×になる*/
+      
+      .openbtn6.active span:nth-of-type(1) {
+          top: 18px;
+          left: 18px;
+          transform: translateY(6px) rotate(-135deg);
+          width: 30%;
+      }
+      
+      .openbtn6.active span:nth-of-type(2) {
+        opacity: 0;
+      }
+      
+      .openbtn6.active span:nth-of-type(3){
+          top: 30px;
+          left: 18px;
+          transform: translateY(-6px) rotate(135deg);
+          width: 30%;
+      }
+}
+.p_sp_nav{
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #ffffff, $alpha: 0.9);
+    padding: 30% 10% 20%;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    z-index: 1000;
+    a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    li{
+        margin-top: 40px;
+    }
+    &.active{
+        display: flex;
+        animation-name: fade;
+        animation-duration: 2s;
+    }
+    
+}
+
+
+// mainvisual
+
+.p_main{
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-left: 50px;
+    @media screen and (max-width: 760px) {
+        padding-left: 0px;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+     
+    img {
+        width: 100%;
+        object-fit: cover;
+        @media screen and (max-width: 760px) {
+            height: 500px;
+           }
+    }
+     
+    // .slider {
+    //     max-width: 1200px;
+    //     margin: 0 auto;
+    // }
+}
+
+.autoplay img{
+    width: 100%;
+}
+
+
+// concept
+
+.concept{
+    margin-top: 180px;
+    padding: 0 32px;
+    @media screen and (max-width: 760px) {
+        padding: 0 32px;
+        margin-top: 80px;
+    }
+    h2{
+        font-size: 32px;
+        @media screen and (max-width: 760px) {
+          margin-top: 40px;
+        }
+    }
+    .subttl{
+        margin-top: 25px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 760px) {
+            flex-direction: column-reverse;
+        }
+    }
+    .desc{
+        margin-top: 25px;
+        font-size: 14px;
+        line-height: 2;
+   
+    }
+    .text{
+        padding-right: 90px;
+        @media screen and (max-width: 760px) {
+            padding-right: 0px;
+        }
+    }
+    .conceptimage{
+        width: 60%;
+        @media screen and (max-width: 760px) {
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .text{
+        width: 40%;
+        @media screen and (max-width: 760px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .conceptimage2{
+        flex-basis: 33.33%;
+        @media screen and (max-width: 760px) {
+            flex-basis: 100%;
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .text2{
+        flex-basis: 33.33%;
+        font-size: 14px;
+        line-height: 2;
+        box-sizing: border-box;
+        padding-left: 76px;
+        @media screen and (max-width: 760px) {
+           text-align: center;
+           padding-left: 0;
+        }
+        .desc2{
+            margin-top: 25px;
+            @media screen and (max-width: 760px) {
+                margin-bottom: 40px;
+             }
+        }
+        .subttl{
+            margin-top: 0;
+        }
+        
+    }
+}
+
+// sttyle
+
+.style{
+    margin-top: 180px;
+    padding: 0 24px;
+    .tab-container {
+        display: flex;
+      }
+      .tab {
+        position: relative;
+        padding: 1em;
+        background-color: #ddd;
+        transition: all .2s;
+        cursor: pointer;
+      }
+      .tab:not(:last-of-type) {
+        margin-right: 1em;
+      }
+      /* タブ現在値 */
+      .current {
+        color: #eaeaea;
+        background-color: #3972a7;
+      }
+
+      /************* メニュー *************/
+      .menu-box {
+        width: 100%;
+        max-width: 1000px;
+        display: grid;
+        gap: 48px;
+        transition: all .8s;
+        animation-name: fade;
+        animation-duration: 2s;
+
+        // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        img{
+            width: 100%;
+        }
+      }
+      .menu {
+        transition: all .8s;
+        cursor: pointer;
+      }
+
+      .ttlwrap{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 40px;
+          @media screen and (max-width: 760px) {
+            flex-direction: column;
+           }
+          h2{
+            font-size: 32px;
+            @media screen and (max-width: 760px) {
+                flex-direction: column;
+                margin-bottom: 24px;
+               }
+          }
+      }
+      .hair{
+          font-size: 16px;
+          margin-top: 6px;
+      }
+      .day{
+        font-size: 14px;
+        margin-top: 6px;
+    }
+}
+
+// menu
+
+.pricemenu{
+    margin-top: 180px;
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 72px;
+        @media screen and (max-width: 760px) {
+            flex-direction: column;
+            padding: 0 24px;
+           }
+    }
+    .wrapper{
+        max-width: 750px;
+    }
+    h2{
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+    h3{
+        padding: 8px 12px;
+        font-size: 24px;
+    }
+    .lineb{
+        height: 2px;
+        background-color: #313131;
+        @media screen and (max-width: 760px) {
+           margin-top: 24px;
+           }
+    }
+    .liner{
+        height: 1px;
+        background-color: #313131;
+    }
+    ul{
+        li{
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 10px;
+            .name{
+                width: 280px;
+            }
+        }
+    }
+}
+
+.staff{
+    max-width: 1360px;
+    margin-top: 180px;
+    padding-left: 10.94%;
+    padding-left: 10.94%;
+    @media screen and (max-width: 760px) {
+        padding: 0 24px;
+       }
+    .ttlwrap{
+        display: flex;
+        @media screen and (max-width: 760px) {
+           flex-direction: column;
+         }
+        h2{
+            margin-right: 113px;
+            font-size: 32px;
+            @media screen and (max-width: 760px) {
+                margin-bottom: 40px;
+            }
+        }
+        p{
+            line-height: 1.8;
+        }
+    }
+
+    .menu__item {
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 1px;
+        position: relative;
+      }
+      .menu__item__link {
+        color: #fff;
+        background-color: #313131;
+        text-align: center;
+        display: block;
+        padding: 1rem;
+      }
+       
+      .submenu {
+        background: #fff;
+        display: none;
+      }
+      .submenu__item {
+        color: #222;
+        padding: 1rem;
+      }
+      .menu-box {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        max-width: 1000px;
+        display: grid;
+        gap: 48px;
+        transition: all .8s;
+        animation-name: fade;
+        animation-duration: 2s;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        img{
+            width: 100%;
+        }
+      }
+
+      ul{
+          margin-left: auto;
+          max-width: 1000px;
+      }
+
+      .card-text {
+        position: absolute;
+        left: 0;
+        top: 0%;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #000;
+        color: white;
+        text-align: center;
+        vertical-align:middle;
+        opacity: 0.6;
+        display: none;
+        @media screen and (max-width: 760px) {
+            position: relative;
+            display: block;
+            opacity: 1;
+            color:#313131;
+            background-color: white;
+           }
+        p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            @media screen and (max-width: 760px) {
+               position: relative;
+               display: block;
+               top: 0;
+               left: 0;
+               color: #313131;
+               transform: translate(0,0);
+               margin-top: 8px;
+              }
+        }
+      }
+      .menu{
+          position: relative;
+      }
+      
+
+}
+
+.access{
+    .map{
+        width: 63%;
+        @media screen and (max-width: 760px) {
+            width: 100%;
+           }
+        iframe{
+            width: 100%;
+            height: 300px;
+            margin-top: 40px;
+        }
+    }
+    .map_text{
+        padding-left: 90px;
+        @media screen and (max-width: 760px) {
+            padding-left: 0px;
+            text-align: center;
+           }
+        p{
+            margin-top: 20px;
+        }
+    }
+}
+
+footer{
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #313131;
+    color:#fff;
+    margin-top: 180px;
+    @media screen and (max-width: 760px) {
+        margin-top: 80px;
+       }
+}
