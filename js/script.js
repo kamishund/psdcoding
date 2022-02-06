@@ -1,58 +1,127 @@
-$(".openbtn6").click(function () {
+let swipeOption = {
+  loop: true,
+  effect: 'fade',
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  speed: 2000,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+}
+new Swiper('.swiper-container', swipeOption);
+
+
+
+$(function () {
+  $(".openbtn1").click(function () {
     $(this).toggleClass('active');
-    $(".p_sp_nav").toggleClass('active');
+    // $('.nav-wrapper').toggleClass('fade');
+    $('.nav-wrapper').toggleClass('slide-in'); 
+  });
+});
+
+
+
+$(function () {
+    //任意のタブにURLからリンクするための設定
+  function GethashID (hashIDName){
+    if(hashIDName){
+      //タブ設定
+      $('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
+        var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得 
+        if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+          var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+          $('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
+          $(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+          //表示させるエリア設定
+          $(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+          $(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加 
+        }
+      });
+    }
+  }
+
+  //タブをクリックしたら
+  $('.tab a').on('click', function() {
+    var idName = $(this).attr('href'); //タブ内のリンク名を取得  
+    GethashID (idName);//設定したタブの読み込みと
+    return false;//aタグを無効にする
+  });
+
+
+  // 上記の動きをページが読み込まれたらすぐに動かす
+  $(window).on('load', function () {
+      $('.tab li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+      $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+    var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+    GethashID (hashName);//設定したタブの読み込み
+  });
+});
+
+
+
+
+
+$(function () {
+  jQuery(window).on('scroll', function () {
+    if (jQuery('header').height() < jQuery(this).scrollTop()) {
+        jQuery('header').addClass('change-color');
+    } else {
+        jQuery('header').removeClass('change-color');
+    }
+  });
+});
+
+
+$(function () {
+  var sample = document.getElementById('sample');
+  var fp = flatpickr(sample, {
+    dateFormat: 'Y-n-j(l)', // フォーマットの変更
+    minDate: "today",
+    mode:"multiple",
+  });  
+
+  $(".btnyoyaku").click(function () {
+    $(".modal-bg").toggleClass('active');
+    $("body").toggleClass('active');
+  });
+
+  $(".batu-btn").click(function () {
+    $(".modal-bg").toggleClass('active');
+    $("body").toggleClass('active');
+  });
+
+  
+});
+
+$(function() {
+  $('.visible').on('inview', function(event, isInView) {
+  //一度のみのinviewの際は　.oneにする
+    if (isInView) {
+		// .visibleがビューポートに入った場合
+    	$(this).addClass('effect');
+    } else {
+		// .visibleがビューポートにから抜けた場合
+    	// $(this).removeClass('effect');
+    }
+	//$('#footer').off('inview');
+  });
 });
 
 
 $(function() {
-    $('.slider').slick({
-        accessibility: false,
-        fade: true,
-        autoplay: true,
-        infinite: true,
-        dots: false,
-        arrows: false,
-        autoplaySpeed: 3000,
-        speed: 3000,
-    });
-
-    //////////// 一番目以外のコンテンツは非表示
-  $(".style .menu-box:not(:first-of-type)").css("display", "none");
-  //////////// タブの制御
-  $('.style .tab').click(function () { // タブメニューをhoverしたら
-    var index = $('.style .tab').index(this); // hoverしたタブ番号を取得
-    $('.style .tab').removeClass('current'); // タブ現在地クラスを削除し、
-    $(this).addClass('current'); // hoverしたタブにタブ現在地クラスを付与
-    //////////// コンテンツの制御
-    $('.style .menu-box').hide().eq(index).show(); // hoverしてないコンテンツは非表示、hoverした番号は表示
+  $('.under').on('inview', function(event, isInView) {
+  //一度のみのinviewの際は　.oneにする
+    if (isInView) {
+		// .visibleがビューポートに入った場合
+    	$(this).addClass('effect');
+    } else {
+		// .visibleがビューポートにから抜けた場合
+    	// $(this).removeClass('effect');
+    }
+	//$('#footer').off('inview');
   });
-
-  $('.js-menu__item__link').each(function(){
-    $(this).on('click',function(){
-        $(".submenu").slideToggle();
-        return false;
-    });
-});
-
-
-});
-
-
-
-$(window).on('load resize', function(){
-  var winW = $(window).width();
-  var devW =  759;
-  // $('.menu').on('mouseover', function () {
-  //   $(this).children('.card-text').stop().fadeIn();
-  // });
-  if (winW <= devW) {
-    
-  } else {
-    $('.menu').on('mouseover', function () {
-      $(this).children('.card-text').stop().fadeIn();
-    });
-    $('.menu').on('mouseout', function () {
-      $(this).children('.card-text').stop().fadeOut();
-    });
-  }
 });

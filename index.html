@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hairsalon</title>
+    <title>石井花壇</title>
+    <link rel="shortcut icon" href="./img/logo02.png" type="image/x-icon">
 
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -12,9 +13,13 @@
     crossorigin="anonymous"></script>
 
     <!-- slick -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <!-- carendar -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
     <!--  -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -22,401 +27,169 @@
 </head>
 <body>
     <header>
-        <p class="p_logo">
-            LOGO
-        </p>
-        <div class="p_nav">
-            <nav class="p_nav_pc">
-                <ul>
-                    <li><a href="">CONCEPT</a></li>
-                    <li><a href="">STYLE</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">STAFF</a></li>
-                    <li><a href="">ACCESS</a></li>
-                    <li><a href="">RESERVE</a></li>
-                </ul>
-            </nav>
-            <div class="openbtn6"><span></span><span></span><span></span></div>
-        </div>
+        <div class="head_wrapper">
+            <div class="left">
+                <a href="/" class="top"><img src="./img/logo-w-2.svg" alt="" class="logo"></a>
+                <a href="/" class="sub"><img src="./img/logo-b.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">トップ<br><span>TOP</span></a>
+                        </li>
+                        <li>
+                            <a href="">事業内容<br><span>SERVICES</span></a>
+                        </li>
+                        <li>
+                            <a href="">園崎組について<br><span>ABOUT</span></a>
+                        </li>
+
+                        <li>
+                            <a href="">園崎組の実績<br><span>WORKS</span></a>
+                        </li>
+                        <li>
+                            <a href="">採用情報<br><span>RECRUIT</span></a>
+                        </li>
+                        <li>
+                            <a href="">お問い合わせ<br><span>CONTACT</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right">
+                <a><img src="./img/btnyoyaku.jpg" alt="" class="btnyoyaku"></a>
+                <div class="openbtn1"><span></span><span></span><span></span></div>
+            </div>
+        </div>  
     </header>
-    <div class="p_sp_nav">
-        <nav>
-            <ul>
-                <li><a href="">CONCEPT</a></li>
-                <li><a href="">STYLE</a></li>
-                <li><a href="">MENU</a></li>
-                <li><a href="">STAFF</a></li>
-                <li><a href="">ACCESS</a></li>
-                <li><a href="">RESERVE</a></li>
+    <div class="nav-wrapper">
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="">トップ<br><span>TOP</span></a>
+                </li>
+                <li>
+                    <a href="">事業内容<br><span>SERVICES</span></a>
+                </li>
+                <li>
+                    <a href="">園崎組について<br><span>ABOUT</span></a>
+                </li>
+
+                <li>
+                    <a href="">園崎組の実績<br><span>WORKS</span></a>
+                </li>
+                <li>
+                    <a href="">採用情報<br><span>RECRUIT</span></a>
+                </li>
+                <li>
+                    <a href="">お問い合わせ<br><span>CONTACT</span></a>
+                </li>
             </ul>
         </nav>
     </div>
-    <!-- headermenu -->
 
-    <!-- mainvisual -->
-    <div class="p_main">
-        <ul class="slider">
-            <li><img src="./img/main1.jpg"></li>
-            <li><img src="./img/main2.jpg"></li>
-            <li><img src="./img/main3.jpg"></li>
-        </ul>
+    <div class="mainvisual">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <div class="slide-img">
+                    <img src="./img/top-image-1.png" alt="スライダー画像1">
+                </div>
+                </div>
+                <div class="swiper-slide">
+                <div class="slide-img">
+                    <img src="./img/top-image-2.png" alt="スライダー画像2">
+                </div>
+                </div>
+                <div class="swiper-slide">
+                <div class="slide-img">
+                    <img src="./img/top-image-3.png" alt="スライダー画像3">
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h1>
+                CHALLENGE<br>
+                FROM THE BOTTOM
+            </h1>
+            <div class="desc">
+                <p class="text">社会の基礎を支え</p>
+            </div>
+            <div class="desc widthw">
+                <p class="text">基礎から世界を変革する会社</p>
+            </div>
+
+            <div class="newstag">
+                <p class="news">NEWS</p>
+                <div class="inner">
+                    <p class="date">2021.06.12</p>
+                    <p class="tag">お知らせ</p>
+                    <p class="content">新サイトを公開しました。</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- section concept -->
-    <section class="concept">
-        <div class="wrapper">
-            <div class="flex">
-                <div class="text">
-                    <h2>CONCEPT</h2>
+    <section class="service"> 
+        <div class="bg">
+            <div class="wrapper">
+                <div class="imgarea">
+                    <img src="./img/image-services.jpg" alt="">
+                </div>
+                <div class="textarea">
+                    <h2>SERVICES<span>事業内容</span></h2>
                     <p class="subttl">
-                        サンプルテキストです<br>
-                        サンプルです
+                        人々の生活基盤を<br>
+                        世界最高峰の技術で支える
                     </p>
                     <p class="desc">
-                        この文章はダミーです。文字の大きさ、量、間、行間等を確認するために入れています。 この文章はダミーです。文字の大きさ、量、間、行間等を確認するために入れています。
+                        私達のモットーは、 「社会基盤から世界をより良くする」こと。<br>
+                        そのために最前線で国家規模のプロフェクトに参画することもあれば、<br>
+                         世界各国の技術者、研究者と共に次世代の建設機材の研究開発事業も<br>
+                         同時に行うことで、業界の進化の促進を担っています。
                     </p>
-                </div>
-
-                <div class="conceptimage">
-                    <img src="./img/hair-salon-5200393_1920.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="wrapper smg">
-            <div class="flex">
-                <div class="conceptimage2">
-                    <img src="./img/barbershop-4484300_1920.jpg" alt="">
-                </div>
-                <div class="conceptimage2">
-                    <img src="./img/beauty-saloon-569111_1920.jpg" alt="">
-                </div>
-                <div class="text2">
-                    <p class="subttl">
-                        サンプルテキストです<br>
-                        サンプルです
-                    </p>
-                    <p class="desc2">
-                        この文章はダミーです。文字の大きさ、量、間、行間等を確認するために入れています。 この文章はダミーです。文字の大きさ、量、間、行間等を確認するために入れています。
-                    </p>
+                    <a href="#" class="btn">事業内容を更に知る</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="style">
+    <section class="about">
         <div class="wrapper">
-            <div class="ttlwrap">
-                <div>
-                    <h2>STYLE</h2>
-                </div>
-                <ul class="tab-container">
-                    <li class="tab current">メニュー1</li>
-                    <li class="tab">メニュー2</li>
-                </ul>
-            </div>
-            <nav class="wrap">
-                <div>
-                  <ul class="menu-box">
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                    <li class="menu">
-                        <img src="./img/woman-1.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                  </ul>
-                  <ul class="menu-box">
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-                    <li class="menu">
-                        <img src="./img/woman-2.jpg" alt="">
-                        <p class="hair">ヘアスタイル1 X ヘアスタイル1</p>
-                        <p class="day">2021/050/03</p>
-                    </li>
-
-                  </ul>
-                </div>
-              </nav>
-        </div>
-    </section>
-
-    <!-- section menu -->
-    <section class="pricemenu">
-        <div class="wrapper">
-            <h2>MENU</h2>
-            <div class="flex">
-                <div class="table">
-                    <div class="lineb"></div>
-                    <h3>Cut Menu</h3>
-                    <div class="liner"></div>
-                    <ul>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="table">
-                    <div class="lineb"></div>
-                    <h3>Cut Menu</h3>
-                    <div class="liner"></div>
-                    <ul>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="flex">
-                <div class="table">
-                    <div class="lineb"></div>
-                    <h3>Cut Menu</h3>
-                    <div class="liner"></div>
-                    <ul>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="table">
-                    <div class="lineb"></div>
-                    <h3>Cut Menu</h3>
-                    <div class="liner"></div>
-                    <ul>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                        <li>
-                            <p class="name">カット</p>
-                            <p class="price">￥5000</p>
-                        </li>
-                    </ul>
-                </div>
+            <div class="item">
+                <img class="spa" src="./img/background-image-about.jpg" alt="">
+                <h2>ABOUT<span>園崎組について</span></h2>
+                <p class="desc">
+                    園崎組は埼玉県秩父市にて、主に土木工事にて<br>
+                    社会基盤を支える企業になります。<br>
+                    また、自社工場において施工に必要とされる<br>
+                    各種資材も生産しており、各業者に提供することで、<br>
+                     社会基盤の構築・整備に貢献しております。
+                </p>
+                <a href="#" class="btn">詳しく見る</a>
+                <img class="sph" src="./img/image-about.jpg" alt="">
             </div>
         </div>
     </section>
 
-     
-    <!-- staff -->
-
-    <section class="staff">
-            <div class="ttlwrap">
-                <div>
-                    <h2>STAFF</h2>
-                </div>
-               <p>
-                この文章はダミーです。文字の大きさ、量、間、行間等を確認するために入れています。<br>
-                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-               </p>
-            </div>
-    
-            <ul class="menu-box">
-                <li class="menu">
-                    <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                    <div class="card-text">
-                        <p> テキスト1</p>
-                    </div>
-                </li>
-                <li class="menu">
-                    <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                    <div class="card-text">
-                        <p> テキスト1</p>
-                    </div>
-                </li>
-                <li class="menu">
-                    <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                    <div class="card-text">
-                        <p> テキスト1</p>
-                    </div>
-                </li>
-            </ul>
-    
-            <ul class="menu">
-                <li class="menu__item">
-                    <div class="submenu">
-                        <ul class="menu-box">
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-
-                            <li class="menu">
-                                <img src="./img/portrait-of-a-girl-1390728_1920.jpg" alt="">
-                                <div class="card-text">
-                                    <p> テキスト1</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <a class="menu__item__link js-menu__item__link" href="">さらに見る</a>
-                </li>
-            </ul>
+    <section class="works">
+       <div class="bg2">
+           <div class="inner">
+              <h2>ABOUT<span>園崎組について</span></h2>
+              <p class="subttl">
+                社会を基礎から、変革してきたプロジェクト
+              </p>
+              <p class="desc">
+                創業以來より培われた確かな技術力で社会を変革する様々な案件を手掛けてきました。<br>
+                その一部を紹介させていただきます。
+              </p>
+           </div>
+       </div>
     </section>
 
 
-    
-    <!-- section concept -->
-    <section class="concept access">
-        <div class="wrapper">
-            <div class="flex">
-                <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.126387292801!2d139.743566691581!3d35.658235997750396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1636775810972!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="map_text">
-                    <h2>ACCESS</h2>
-                    <p class="yubin">
-                        〒501-6104
-                    </p>
-                    <p class="yubin">
-                        東京都吉祥寺北町 xx-xxx-x
-                    </p>
-                    <p class="open">
-                        Open : 9:00 - 19:00
-                    </p>
-                    <p class="open">
-                        Close : 月曜 / 第一、第三火曜
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>2021shunD.</p>
-    </footer>
-
-
-
-    
 
     <script src="./js/script.js"></script>
 </body>
