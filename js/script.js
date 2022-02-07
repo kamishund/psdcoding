@@ -66,3 +66,8 @@ $(function() {
 	//$('#footer').off('inview');
   });
 });
+
+
+$(function () {
+  $('#loading').addClass('loaded');
+});
